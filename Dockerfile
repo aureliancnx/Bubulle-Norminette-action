@@ -14,8 +14,6 @@ RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubul
 RUN ln -s /usr/bin/python3 /usr/bin/python & \
     ln -s /usr/bin/pip3 /usr/bin/pip
 
-COPY LICENSE README.md /
-
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
