@@ -1,0 +1,12 @@
+name: 'Bubulle Norminette check'
+description: 'Runs bubulle norminette check on your source code'
+author: 'aureliancnx'
+inputs: 
+  myInput:
+    description: 'Input to use'
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.myInput }}
