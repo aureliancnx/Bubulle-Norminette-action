@@ -7,12 +7,12 @@ RUN apt-get update && apt-get install -y \
         xz-utils \
 	python3-pip
 
-RUN alias pip="pip3"
-
 RUN pip3 install pyparsing pycparser --user
 
-RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)" && \
-	bubulle	
+RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
+
+RUN ln -s /usr/bin/python /usr/bin/python3 & \
+    ln -s /usr/bin/pip /usr/bin/pip3
 
 COPY LICENSE README.md /
 
