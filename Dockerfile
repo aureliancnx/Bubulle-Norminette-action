@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN alias pip="pip3"
 
+RUN pip3 install pyparsing pycparser --user
+
 RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)" && \
 	bubulle	
 
