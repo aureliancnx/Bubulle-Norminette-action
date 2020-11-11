@@ -4,6 +4,7 @@ RUN apt-get update && apt-get install -y \
         git \
 	sudo \
 	curl \
+	jq \
         xz-utils \
 	python3-pip
 
