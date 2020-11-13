@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip3 install pyparsing pycparser
 
+RUN pip3 install pycparser-fake-libc
+
 RUN sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/aureliancnx/Bubulle-Norminette/master/install_bubulle.sh)"
 
 RUN ln -s /usr/bin/python3 /usr/bin/python & \
